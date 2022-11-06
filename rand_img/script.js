@@ -1,9 +1,7 @@
 let imageElement = document.querySelector(".main_img");
 
 function updateImage() {
-  fetch(
-    "https://api.unsplash.com/photos/random/?client_id=c4rKmt5cuIUImWU0AUBsOlLwMutHjeQGo6gRjzUZlpk"
-  )
+  fetch("https://api.thecatapi.com/v1/images/search")
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
