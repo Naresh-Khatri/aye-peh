@@ -5,7 +5,7 @@ function updateImage() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      imageElement.src = data.url;
+      imageElement.src = data[0].url;
     });
 }
 
