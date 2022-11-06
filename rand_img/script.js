@@ -1,4 +1,5 @@
-let imageElement = document.querySelector(".main_img");
+const imageElement = document.querySelector(".main_img");
+const nextBtn = document.querySelector("#next_btn");
 
 function updateImage() {
   fetch("https://api.thecatapi.com/v1/images/search")
@@ -9,8 +10,6 @@ function updateImage() {
     });
 }
 
-updateImage()
+updateImage();
 
-// challege 2
-
-//make the 'Next Photo' button work
+nextBtn.addEventListener("click", updateImage);
